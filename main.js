@@ -3,6 +3,8 @@
 function melodyShop() {
     let nombre = 'none'
     let album = 'none'
+    const carrito = []
+
     function bienvenida() {
         nombre = prompt("Hola, Bienvenido a Melody Shop, tu tienda musical ¿Como te llamas?")
         if (nombre == '') {
@@ -39,68 +41,91 @@ function melodyShop() {
 
     }
 
-
-    function disfrutaTuAlbum() {
-        console.log("Album adquirido con exito ¡Que lo disfrutes!")
-    }
-
-    disfrutaTuAlbum()
-
-
     function comprar() {
         if (album == 1) {
             confirmacion = confirm("Compraste Living Things de Linkin Park, deseas seguir comprando?")
-            disfrutaTuAlbum()
-            if (confirmacion == true)
+            if (confirmacion == true) {
+                carrito.push("Living Things de Linkin Park adquirido con exito ¡Que lo disfrutes!")
                 inicio();
-            else if (confirmacion == false)
+            }
+            else if
+                (confirmacion == false) {
+                carrito.push("Living Things de Linkin Park adquirido con exito ¡Que lo disfrutes!")
+                console.log(carrito)
                 alert("¡Gracias por elegirnos!")
-            bienvenida();
+                bienvenida();
+            }
+
         }
         if (album == 2) {
             confirmacion = confirm("Compraste El mal querer de Rosalia, deseas seguir comprando?")
-            disfrutaTuAlbum()
-            if (confirmacion == true)
+            if (confirmacion == true) {
+                if (confirmacion == true)
+                    carrito.push("El mal querer de Rosalia adquirido con exito ¡Que lo disfrutes!")
                 inicio();
-            else if (confirmacion == false)
+            } else if (confirmacion == false) {
+                carrito.push("El mal querer de Rosalia adquirido con exito ¡Que lo disfrutes!")
+                console.log(carrito)
                 alert("¡Gracias por elegirnos!")
-            bienvenida();
+                bienvenida();
+            }
         }
         if (album == 3) {
             confirmacion = confirm("Compraste Clancy de Twenty One Pilots, deseas seguir comprando?")
-            disfrutaTuAlbum()
-            if (confirmacion == true)
+            if (confirmacion == true) {
+                carrito.push("Clancy de Twenty One Pilots adquirido con exito ¡Que lo disfrutes!")
+                console.log(carrito)
                 inicio();
-            else if (confirmacion == false)
+            }
+            else if (confirmacion == false) {
+                carrito.push("Clancy de Twenty One Pilots adquirido con exito ¡Que lo disfrutes!")
+                console.log(carrito)
                 alert("¡Gracias por elegirnos!")
-            bienvenida();
+                bienvenida();
+            }
+
         }
         if (album == 4) {
             confirmacion = confirm("Compraste Vol.3: The Subliminal Verses de Slipknot, deseas seguir comprando?")
-            disfrutaTuAlbum()
-            if (confirmacion == true)
+            if (confirmacion == true){
+                carrito.push("Vol.3: The Subliminal Verses de Slipknot adquirido con exito ¡Que lo disfrutes!")
+                console.log(carrito)
                 inicio();
-            else if (confirmacion == false)
+            }
+            else if (confirmacion == false){
+                carrito.push("Vol.3: The Subliminal Verses de Slipknot adquirido con exito ¡Que lo disfrutes!")
+                console.log(carrito)
                 alert("¡Gracias por elegirnos!")
-            bienvenida();
+                bienvenida();
+            }
         }
         if (album == 5) {
             confirmacion = confirm("Compraste Love Language de Windwaker, deseas seguir comprando?")
-            disfrutaTuAlbum()
-            if (confirmacion == true)
+            if (confirmacion == true){
+                carrito.push("Love Language de Windwaker adquirido con exito ¡Que lo disfrutes!")
+                console.log(carrito)
                 inicio();
-            else if (confirmacion == false)
+            }else if (confirmacion == false){
+                carrito.push("Love Language de Windwaker adquirido con exito ¡Que lo disfrutes!")
+                console.log(carrito)
                 alert("¡Gracias por elegirnos!")
             bienvenida();
+            }
+
         }
         if (album == 6) {
             confirmacion = confirm("Compraste Renaissance de Apashe, deseas seguir comprando?")
-            disfrutaTuAlbum()
-            if (confirmacion == true)
+            if (confirmacion == true){
                 inicio();
-            else if (confirmacion == false)
+                carrito.push("Renaissance de Apashe adquirido con exito ¡Que lo disfrutes!")
+                console.log(carrito)
+            }
+            else if (confirmacion == false){
+                carrito.push("Renaissance de Apashe adquirido con exito ¡Que lo disfrutes!")
+                console.log(carrito)
                 alert("¡Gracias por elegirnos!")
             bienvenida();
+            }
         }
         else {
             alert("Debes de escribir una opcion valida")
@@ -111,9 +136,7 @@ function melodyShop() {
 
     }
 
-    comprar()
 
-    bienvenida();
 
 }
 
