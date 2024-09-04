@@ -1,142 +1,105 @@
+let iconoCarrito = document.querySelector('.img-carrito');
+let body = document.querySelector('body');
+let cerrarCarrito = document.querySelector('.BotonCerrar');
+let ListaCarrito = document.querySelector('.ListaCarrito');
+
+iconoCarrito.addEventListener('click', () => {
+    body.classList.toggle('mostrarCarrito')
+})
+
+cerrarCarrito.addEventListener ('click', () => {
+    body.classList.toggle('mostrarCarrito')
+    
+})
 
 
-function melodyShop() {
-    let nombre = 'none'
-    let album = 'none'
-    const carrito = []
+function Producto(id, nombre, artista, valor, año, cantidad) {
+    this.id = id
+    this.nombre = nombre
+    this.artista = artista
+    this.valor = valor
+    this.año = año
+    this.cantidad = cantidad
+}
+let album = new Producto(1, "Living Things", "Linkin Park", 15, 2012, 1)
+let album2 = new Producto(2, "El mal querer", "Rosalia", 20, 2018, 1)
+let album3 = new Producto(3, "Clancy", "Twenty One Pilots", 30, 2024, 1)
+let album4 = new Producto(4, "Vol.3: The Subliminal Verses", "Slipknot", 15, 2005, 1)
+let album5 = new Producto(5, "Love Language", "Windwaker", 18, 2022, 1)
+let album6 = new Producto(6, "Hyperviolence", "Windwaker", 20, 2024, 1)
+let album7 = new Producto(7, "Rennaisance", "Apashe", 25, 2020, 1)
+let album8 = new Producto(8, "Take Me Back To Eden", "Sleep Token", 25, 2023, 1)
+let album9 = new Producto(9, "Obsidian", "Northlane", 18, 2022, 1)
+let album10 = new Producto(10, "Disparity", "Oceans Ate Alaska", 26, 2022, 1)
+let album11 = new Producto(11, "Hit Me Hard and Soft", "Billie Eilish", 20, 2024, 1)
+ 
+const productos = [
+    album,
+    album2,
+    album3,
+    album4,
+    album5,
+    album6,
+    album7,
+    album8,
+    album9,
+    album10,
+    album11
+] 
 
-    function bienvenida() {
-        nombre = prompt("Hola, Bienvenido a Melody Shop, tu tienda musical ¿Como te llamas?")
-        if (nombre == '') {
-            alert("Debes de ingresar un nombre para poder comprar en la tienda")
-            bienvenida();
-        }
-        else if (nombre === null) {
-            alert("¡Hasta Luego, te esperamos pronto!")
-            bienvenida();
-        }
-        else {
-            inicio()
-        }
 
-        album = prompt("¡Buenas " + nombre + "! ¿Que álbum musical deseas comprar? \n Escribe el numero que corresponda para elegir el álbum \n 1. Living Things (Linkin Park) \n 2. El mal querer (Rosalia) \n 3. Clancy (Twenty One Pilots) \n 4. Vol.3: The Subliminal Verses (Slipknot) \n 5. Love Language (Windwaker) \n 6. Renaissance (Apashe)")
+//Almacenar productos que agreguemos al carrito
+
+ let carrito = JSON.parse(localStorage.getItem("carrito")) || []
+ MostrarCarrito()
+
+  
+
+ function AñadirAlCarrito(e){
+    const id = parseInt(e.target.id)
+    const producto = productos.find((prod) =>
+        prod.id == id
+    )
+    carrito.push(producto)
+    console.log(carrito);
+    
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+    MostrarCarrito()
+}
+
+
+function MostrarCarrito(){
+    ListaCarrito.innerHTML = ""
+    for (let index = 0; index < carrito.length; index++) {
+    ListaCarrito.innerHTML += `
+        <article class="item">
+                        <div>
+                        </div>
+                        <div>
+                            <p class="NombreArticulo">${carrito[index].nombre}</p>
+                        </div>
+                        <div>
+                            <p class="PrecioTotal">$${carrito[index].valor}</p>
+                        </div>
+                        </div>
+                        <button onclick="BorrarProducto(event)" id="${carrito[index].id}">Eliminar</button>
+                    </article>
+                    `
+        
     }
-    bienvenida()
-    function inicio() {
-        album = prompt("¡Buenas " + nombre + "! ¿Que álbum musical deseas comprar? \n Escribe el numero que corresponda para elejir el álbum \n 1. Living Things (Linkin Park) \n 2. El mal querer (Rosalia) \n 3. Clancy (Twenty One Pilots) \n 4. Vol.3: The Subliminal Verses (Slipknot) \n 5. Love Language (Windwaker) \n 6. Renaissance (Apashe)")
-        if (album == '') {
-            let confirmacion = confirm("Debes elegir una de las opciones disponibles para poder continuar con tu compra o cancelar si deseas salir de la tienda")
-            if (confirmacion == true)
-                inicio();
-            else if (confirmacion == false)
-                alert("¡Hasta Luego, te esperamos pronto!")
-            bienvenida();
-        } else if (album === null) {
-            alert("¡Hasta Luego, te esperamos pronto!")
-            bienvenida();
-        }
-        else {
-            comprar()
-        }
+}
 
-    }
-
-    function comprar() {
-        if (album == 1) {
-            confirmacion = confirm("Compraste Living Things de Linkin Park, deseas seguir comprando?")
-            if (confirmacion == true) {
-                carrito.push("Living Things de Linkin Park adquirido con exito ¡Que lo disfrutes!")
-                inicio();
-            }
-            else if
-                (confirmacion == false) {
-                carrito.push("Living Things de Linkin Park adquirido con exito ¡Que lo disfrutes!")
-                console.log(carrito)
-                alert("¡Gracias por elegirnos!")
-                bienvenida();
-            }
-
-        }
-        if (album == 2) {
-            confirmacion = confirm("Compraste El mal querer de Rosalia, deseas seguir comprando?")
-            if (confirmacion == true) {
-                if (confirmacion == true)
-                    carrito.push("El mal querer de Rosalia adquirido con exito ¡Que lo disfrutes!")
-                inicio();
-            } else if (confirmacion == false) {
-                carrito.push("El mal querer de Rosalia adquirido con exito ¡Que lo disfrutes!")
-                console.log(carrito)
-                alert("¡Gracias por elegirnos!")
-                bienvenida();
-            }
-        }
-        if (album == 3) {
-            confirmacion = confirm("Compraste Clancy de Twenty One Pilots, deseas seguir comprando?")
-            if (confirmacion == true) {
-                carrito.push("Clancy de Twenty One Pilots adquirido con exito ¡Que lo disfrutes!")
-                console.log(carrito)
-                inicio();
-            }
-            else if (confirmacion == false) {
-                carrito.push("Clancy de Twenty One Pilots adquirido con exito ¡Que lo disfrutes!")
-                console.log(carrito)
-                alert("¡Gracias por elegirnos!")
-                bienvenida();
-            }
-
-        }
-        if (album == 4) {
-            confirmacion = confirm("Compraste Vol.3: The Subliminal Verses de Slipknot, deseas seguir comprando?")
-            if (confirmacion == true){
-                carrito.push("Vol.3: The Subliminal Verses de Slipknot adquirido con exito ¡Que lo disfrutes!")
-                console.log(carrito)
-                inicio();
-            }
-            else if (confirmacion == false){
-                carrito.push("Vol.3: The Subliminal Verses de Slipknot adquirido con exito ¡Que lo disfrutes!")
-                console.log(carrito)
-                alert("¡Gracias por elegirnos!")
-                bienvenida();
-            }
-        }
-        if (album == 5) {
-            confirmacion = confirm("Compraste Love Language de Windwaker, deseas seguir comprando?")
-            if (confirmacion == true){
-                carrito.push("Love Language de Windwaker adquirido con exito ¡Que lo disfrutes!")
-                console.log(carrito)
-                inicio();
-            }else if (confirmacion == false){
-                carrito.push("Love Language de Windwaker adquirido con exito ¡Que lo disfrutes!")
-                console.log(carrito)
-                alert("¡Gracias por elegirnos!")
-            bienvenida();
-            }
-
-        }
-        if (album == 6) {
-            confirmacion = confirm("Compraste Renaissance de Apashe, deseas seguir comprando?")
-            if (confirmacion == true){
-                inicio();
-                carrito.push("Renaissance de Apashe adquirido con exito ¡Que lo disfrutes!")
-                console.log(carrito)
-            }
-            else if (confirmacion == false){
-                carrito.push("Renaissance de Apashe adquirido con exito ¡Que lo disfrutes!")
-                console.log(carrito)
-                alert("¡Gracias por elegirnos!")
-            bienvenida();
-            }
-        }
-        else {
-            alert("Debes de escribir una opcion valida")
-            inicio();
-        }
-
-
-
-    }
-
-
+function BorrarProducto(e){
+    const id = parseInt(e.target.id) 
+    const nuevoCarrito = carrito.filter(producto => producto.id !== id
+    )
+    carrito = nuevoCarrito
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+    MostrarCarrito()
 
 }
 
+
+/* FAlTO HACER ESTA FUNCION function SumarProductos(e) */ 
+
+    
