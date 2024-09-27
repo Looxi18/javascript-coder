@@ -6,97 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre-Entregable 2 JavaScript | Melody SHOP</title>
     <link rel="stylesheet" href="./CSS/styles.css">
-
 </head>
 
-<body class="mostrarCarrito">
 
-    <div class="container">
+<body>
+    <div>
         <header>
             <h1>Melody Shop</h1>
             <div class="Carrito">
-                <img class="img-carrito" src="img/carrito.png" alt="Carrito de Compras">
+                <img class="img-carrito" id="img-carrito" src="img/carrito.png" alt="Carrito de Compras"> <span
+                    id="cantidadCarrito" class="cantidadCarrito"></span>
         </header>
 
 
-
-        <div class="shopContainer">
-            <div class="album">
-                <img class="imagenAlbumes" src="img/Linkin-Park.jpg" alt="Disco Living Things de Linkin Park">
-                <p>Living Things, Linkin Park | 2012</p>
-                <button onclick="AñadirAlCarrito(event)" class="albumBoton" id="1">Comprar</button>
-            </div>
-            <div class="album">
-                <img class="imagenAlbumes" src="img/Rosalia.jpg" alt="Disco El Mal Querer de Rosalia">
-                <p>El Mal Querer, Rosalia | 2018</p>
-                <button onclick="AñadirAlCarrito(event)" class="albumBoton" id="2">Comprar</button>
-            </div>
-            <div class="album">
-                <img class="imagenAlbumes" src="img/clancy.jpg" alt="Disco Clancy de Twenty One Pilots">
-                <p>Clancy, Twenty One Pilots | 2024</p>
-                <button onclick="AñadirAlCarrito(event)" class="albumBoton" id="3">Comprar</button>
-            </div>
-            <div class="album">
-                <img class="imagenAlbumes" src="img/slipknot.jpg" alt="Disco Vol.3: The Subliminal Verses de Slipknot">
-                <p>Vol.3: The Subliminal Verses, Slipknot | 2005</p>
-                <button onclick="AñadirAlCarrito(event)" class="albumBoton" id="4">Comprar</button>
-            </div>
-            <div class="album">
-                <img class="imagenAlbumes" src="img/windwaker.jpg" alt="Disco Love Language de Windwaker">
-                <p>Love Language, Windwaker | 2022</p>
-                <button onclick="AñadirAlCarrito(event)" class="albumBoton" id="5">Comprar</button>
-            </div>
-            <div class="album">
-                <img class="imagenAlbumes" src="img/hyperviolence.jpg" alt="Disco Hyperviolence de Windwaker">
-                <p>Hyperviolence, Windwaker | 2024</p>
-                <button onclick="AñadirAlCarrito(event)" class="albumBoton" id="6">Comprar</button>
-            </div>
-            <div class="album">
-                <img class="imagenAlbumes" src="img/obsidian.jpg" alt="Disco Obsidian de Northlane">
-                <p>Obsidian, Northlane | 2022</p>
-                <button onclick="AñadirAlCarrito(event)" class="albumBoton" id="7">Comprar</button>
-            </div>
-            <div class="album">
-                <img class="imagenAlbumes" src="img/takeMeBackToEden.jpg"
-                    alt="Disco Take Me Back To Eden de Sleep Token">
-                <p>Take Me Back To Eden, Sleep Token | 2023</p>
-                <button onclick="AñadirAlCarrito(event)" class="albumBoton" id="8">Comprar</button>
-            </div>
-            <div class="album">
-                <img class="imagenAlbumes" src="img/apashe.jpg" alt="Disco Renaissance de Apashe">
-                <p>Renaissance, Apashe | 2020</p>
-                <button onclick="AñadirAlCarrito(event)" class="albumBoton" id="9">Comprar</button>
-            </div>
-            <div class="album">
-                <img class="imagenAlbumes" src="img/disparity.jpg" alt="Disco Disparity de Oceans Ate Alaska">
-                <p>Disparity, Oceans Ate Alaska | 2022</p>
-                <button onclick="AñadirAlCarrito(event)" class="albumBoton" id="10">Comprar</button>
-            </div>
-            <div class="album">
-                <img class="imagenAlbumes" src="img/HitMeHardAndSoft.jpg"
-                    alt="Disco Hit Me Hard And Soft de Billie Eilish">
-                <p>Hit Me Hard And Soft, Billie Eilish | 2024</p>
-                <button onclick="AñadirAlCarrito(event)" class="albumBoton" id="11">Comprar</button>
-            </div>
-
+        <div id="shopContainer" class="shopContainer">
         </div>
 
-        <div class="CarritoTab">
+        <div class="ventanaCarrito" id="ventanaCarrito"></div>
+
+        <!-- <div class="CarritoTab" id=CarritoTab>
             <h2>Carrito de compras</h2>
             <div class="ListaCarrito">
             </div>
             <div class="botonesCarritoDeCompras">
                 <button class="BotonCerrar">Cerrar</button>
                 <button class="BotonPagar">Pagar</button>
-            </div>
-        </div>
+            </div>-->
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script src="./JS/main.js"></script>
+        <script src="./JS/carrito.js"></script>
 
 
     </div>
-    </div>
 
 
-    <script src="main.js"></script>
 </body>
 
 </html>

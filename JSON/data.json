@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "nombre": "Living Things, Linkin Park | 2012",
+        "precio": 15,
+        "img": "./img/Linkin-Park.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 2,
+        "nombre": "El mal querer, Rosalia | 2018",
+        "precio": 18,
+        "img": "./img/Rosalia.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 3,
+        "nombre": "Hit me hard and soft, Billie Eilish | 2024",
+        "precio": 35,
+        "img": "./img/HitMeHardAndSoft.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Vol.3: Subliminal Verses, Slipknot | 2004",
+        "precio": 20,
+        "img": "./img/slipknot.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "nombre": "Love Language, Windwaker | 2022",
+        "precio": 16,
+        "img": "./img/windwaker.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 6,
+        "nombre": "Hyperviolence, Windwaker | 2024",
+        "precio": 22,
+        "img": "./img/hyperviolence.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 7,
+        "nombre": "Clancy, Twenty One Pilots | 2024",
+        "precio": 25,
+        "img": "./img/clancy.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 8,
+        "nombre": "Obsidian, Northlane | 2022",
+        "precio": 21,
+        "img": "./img/obsidian.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 9,
+        "nombre": "Renaissance, Apashe | 2020",
+        "precio": 30,
+        "img": "./img/apashe.jpg",
+        "cantidad": 1
+    },
+    {
+        "id": 10,
+        "nombre": "Disparity, Oceans Ate Alaska | 2023",
+        "precio": 26,
+        "img": "./img/disparity.jpg",
+        "cantidad": 1
+    }
+]

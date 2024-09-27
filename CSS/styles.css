@@ -1,8 +1,3 @@
-html, body{
-    overflow-x: hidden;
-    margin: 0;
-}
-
 h1 {
     display: flex;
     justify-content: center;
@@ -21,12 +16,8 @@ p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.imagenAlbumes{
+.imagenAlbumes {
     width: 500px;
-}
-
-.ListaCarrito{
-    overflow-y: scroll;
 }
 
 .shopContainer {
@@ -41,12 +32,12 @@ p {
     cursor: pointer;
 }
 
-.albumBoton{
+.comprar {
     width: 500px;
     text-transform: uppercase;
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -54,7 +45,89 @@ header{
 
 }
 
-.CarritoTab{
+h2 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    justify-self: start;
+}
+
+.ventanaCarrito {
+    width: 70%;
+    margin: 0 15%;
+    max-height: 70vh;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+}
+
+.ventanaCarrito::-webkit-scrollbar {
+    display: none;
+}
+
+.tituloCarrito{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    width: 100%;
+
+}
+
+.cerrarCarrito {
+    cursor: pointer;
+
+}
+
+
+.ventanaCarrito>.contenidoCarrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+}
+
+.ventanaCarrito>div>img {
+    height: 120px;
+    width: 120px;
+}
+
+.precioTotal {
+    font-size: 22px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.botonEliminar {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    font-style: italic;
+}
+
+.cantidadCarrito {
+    background-color: black;
+    color: aliceblue;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    position: absolute;
+    display: none;
+}
+
+
+
+/* .CarritoTab{
     width: 400px;
     height: 100vh;
     background-color: rgba(65, 65, 65, 0.288);
@@ -67,12 +140,12 @@ header{
     transition: .5s;
 }
 
-body.mostrarCarrito .CarritoTab{
+.mostrarCarrito .CarritoTab{
     right: -400px;
     top: 0;
 }
 
-body.mostrarCarrito .container{
+.mostrarCarrito .container{
     transform: translateX(-0px);
 }
 
@@ -81,11 +154,7 @@ body.mostrarCarrito .container{
 }
 
 
-h2{
-    padding: 20px;
-    margin: 0;
-    font-weight: 300;
-}
+
 
 .botonesCarritoDeCompras{
     display: grid;
@@ -129,3 +198,4 @@ h2{
     color: rgb(236, 236, 236);
     border-radius: 50%;
 }
+    */
